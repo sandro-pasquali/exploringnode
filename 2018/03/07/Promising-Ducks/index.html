@@ -94,13 +94,17 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://exploringnode.com/index.html">
+<meta name="description" content="One of the things about a dynamically typed language is that it creates situations where a value type is not implied so it must be identified. So you might use something like if(typeof arg === &amp;#39;st">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Promising Ducks">
+<meta property="og:url" content="http://exploringnode.com/2018/03/07/Promising-Ducks/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="One of the things about a dynamically typed language is that it creates situations where a value type is not implied so it must be identified. So you might use something like if(typeof arg === &amp;#39;st">
 <meta property="og:locale" content="en">
+<meta property="og:updated_time" content="2018-03-07T21:42:47.716Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Promising Ducks">
+<meta name="twitter:description" content="One of the things about a dynamically typed language is that it creates situations where a value type is not implied so it must be identified. So you might use something like if(typeof arg === &amp;#39;st">
 
 
 
@@ -129,13 +133,13 @@
 
 
 
-  <link rel="canonical" href="http://exploringnode.com/"/>
+  <link rel="canonical" href="http://exploringnode.com/2018/03/07/Promising-Ducks/"/>
 
 
 
 
 
-  <title>Hexo</title>
+  <title>Promising Ducks | Hexo</title>
   
 
 
@@ -160,9 +164,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -245,9 +247,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -277,9 +279,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/03/07/Promising-Ducks/" itemprop="url">Promising Ducks</a></h1>
+          <h1 class="post-title" itemprop="name headline">Promising Ducks</h1>
         
 
         <div class="post-meta">
@@ -329,9 +329,7 @@
       
 
       
-        
-          
-            <p>One of the things about a dynamically typed language is that it creates situations where a value type is not implied so it must be identified. So you might use something like <code>if(typeof arg === &#39;string&#39;)...</code> to check.</p>
+        <p>One of the things about a dynamically typed language is that it creates situations where a value type is not implied so it must be identified. So you might use something like <code>if(typeof arg === &#39;string&#39;)...</code> to check.</p>
 <p>How do you check if something is a <code>Promise</code>?</p>
 <p>Surprisingly, the given “best practice” is simply to check if the value has a <code>then</code> method – duck typing (<a href="https://promisesaplus.com/#point-53" target="_blank" rel="noopener">https://promisesaplus.com/#point-53</a>):</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">function getIt(maybePromise) &#123;</span><br><span class="line">  let isPromise = maybePromise.then;</span><br><span class="line">  if(!isPromise) &#123; return new Error(`Not a Promise`); &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -340,8 +338,6 @@
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function getIt(maybePromise) &#123;</span><br><span class="line">  maybePromise = resolve(maybePromise);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <p>Now you can just write code knowing your value is always a <code>Promise</code>. </p>
 
-          
-        
       
     </div>
     
@@ -358,132 +354,28 @@
       
 
       
-
-      
-
       
       
-        <div class="post-eof"></div>
+
       
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://exploringnode.com/2018/02/25/hello2/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/25/hello2/" itemprop="url">hello2</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
             
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-25T17:14:45-05:00">
-                2018-02-25
-              </time>
+              <a href="/2018/02/25/hello2/" rel="next" title="hello2">
+                <i class="fa fa-chevron-left"></i> hello2
+              </a>
             
+          </div>
 
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
             
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          
-            <p>Hello, this is a test of a second post.</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -493,129 +385,11 @@
   </article>
 
 
-    
-      
 
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://exploringnode.com/2018/02/05/welcome/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Hexo">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2018/02/05/welcome/" itemprop="url">welcome</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-02-05T17:05:50-05:00">
-                2018-02-05
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
+    <div class="post-spread">
       
     </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
   </div>
-  
-  
-  
-  </article>
-
-
-    
-  </section>
-
-  
 
 
           </div>
@@ -623,6 +397,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -801,10 +579,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
