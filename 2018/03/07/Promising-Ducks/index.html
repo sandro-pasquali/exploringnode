@@ -101,7 +101,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="One of the things about a dynamically typed language is that it creates situations where a value type is not implied so it must be identified. So you might use something like if(typeof arg === &amp;#39;st">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2018-03-07T21:52:16.639Z">
+<meta property="og:updated_time" content="2018-03-07T21:57:57.936Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Promising Ducks">
 <meta name="twitter:description" content="One of the things about a dynamically typed language is that it creates situations where a value type is not implied so it must be identified. So you might use something like if(typeof arg === &amp;#39;st">
@@ -336,7 +336,6 @@
 <p>Problems arise in practice, as this code throws if <code>arg</code> is not an <code>Object</code>. Even more disturbing: a value like <code>{then: 1}</code> would pass, even though <code>then</code> is not a <code>Function</code> here.</p>
 <p>What if you instead act pro-actively, and ensure that <em>everything</em> is a <code>Promise</code>?:</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">function getIt(maybePromise) &#123;</span><br><span class="line">  let definitelyPromise = resolve(maybePromise);  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>Now you can just write code knowing your value is always a <code>Promise</code>. </p>
 
       
     </div>
